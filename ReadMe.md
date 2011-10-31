@@ -14,14 +14,11 @@ The following list contains all the modules used on this project.
 * PRENUP
 * Socket.io
 
-Modules
-------------
-
 ### Express
 
 Express is setup to use EJS templating engine with all html files linking to EJS.
 
-
+We are also using Less4Framework for the css.
 
 ### Testing
 
