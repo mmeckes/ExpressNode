@@ -1,0 +1,24 @@
+{
+    "name": "ExpressNode",
+    "description": "example for node and all cool things",
+    "version": "1.0.0",
+    "author": "Daniel Portella <dan.portella@cohaesus.co.uk>",
+    "contributors": [
+        { "name": "Daniel Portella", "email": "dan.portella@cohaesus.co.uk" }
+    ],
+    "repository":{
+        "type": "git",
+        "url": "git@github.com:dmportella/ExpressNode.git"
+    },
+    "dependencies": {
+        "express": "2.4.7",
+        "ejs": "0.4.3",
+        "socket.io": "0.8.6"
+    },
+    "devDependencies": {
+        "vows": "0.5.11",
+        "prenup": "0.0.0"
+    },
+    "main": "Start",
+    "engines": { "node": ">= 0.4.0" }
+}

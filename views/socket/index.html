@@ -1,0 +1,9 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://expressnode.dmportella.cloud9ide.com');
+  socket.on('news', function (data) {
+    console.log(data);
+    alert(data.hello);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
