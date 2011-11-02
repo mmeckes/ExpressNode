@@ -13,7 +13,8 @@
     "dependencies": {
         "express": "2.4.7",
         "ejs": "0.4.3",
-        "socket.io": "0.8.6"
+        "socket.io": "0.8.6",
+        "async": "0.1.14"
     },
     "devDependencies": {
         "vows": "0.5.11",

@@ -55,6 +55,31 @@ app.listen(port, function() {
 
 var io = require('socket.io').listen(app);
 
+// defining a function
+var findDatabyIP = function(val, callback){
+    val.authorized = true;
+    process.nextTick(function(){
+        callback(null, val);
+    });
+};
+
+io.configure(function (){
+  io.set('authorization', function (handshakeData, callback) {
+    // findDatabyip is an async example function
+    findDatabyIP(handshakeData, function (err, data) {
+      if (err) return callback(err);
+
+      if (data.authorized) {
+        handshakeData.foo = 'bar';
+        for(var prop in data) handshakeData[prop] = data[data];
+        callback(null, true);
+      } else {
+        callback(null, false);
+      }
+    }); 
+  });
+});
+
 io.sockets.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
   socket.on('my other event', function (data) {
